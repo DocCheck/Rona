@@ -214,7 +214,7 @@ def train_model():
 
 
     print("############### saving the model ######################")
-    model_path = "data/models/rotation_estimation_weights.pt"
+    model_path = "data/models/instrument_detector_model.pt"
     torch.save(model, model_path)
     #'''
 
@@ -280,7 +280,7 @@ def train_model():
     test_dataset = CustomDataset(X_test, y_test, transform=custom_transform_inference, num_class=357)
     test_loader = DataLoader(test_dataset, shuffle=False, batch_size=256)
 
-    model_path = "data/models/rotation_estimation_weights.pt"
+    model_path = "data/models/instrument_detector_model.pt"
     device = torch.device('cpu')
     loaded_model = torch.load(model_path, map_location=device)
     correct_val = 0
