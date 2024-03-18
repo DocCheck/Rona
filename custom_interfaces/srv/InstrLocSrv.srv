@@ -1,0 +1,8 @@
+string instrument
+SingleInstrumentMsg[] all_instruments
+---
+float32 xi
+float32 yi
+float32 yaw
+float32 w
+bool success
