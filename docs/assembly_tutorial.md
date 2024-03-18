@@ -34,7 +34,7 @@ First of all mount the robot on a flat surface with enough space around it. Inst
 
 ![image2](imgs/Image2.jpg)![image3](imgs/Image3.jpg)
 
-Take the sensor gripper tip cap next and put the sensor inside. Connect the jumper cables to sensor pins before mounting the cap makes it easier to reach. The way we mount it is we screw everything together - cap, sensor and gripper with the 1x M3x16 screw. The screw goes through the upper hole (*red arrow*) of the cap and through the hole of the sensor and screws both cap and sensor tightly to the gripper. Through the bottom hole you can adjust the sensitivity of the sensor without having to disassemble the gripper tip cap.
+Take the sensor gripper tip cap next and put the sensor inside. Connect the jumper cables to the sensor pins before mounting the cap makes it easier to reach. The way we mount it is we screw everything together - cap, sensor and gripper with the 1x M3x16 screw. The screw goes through the upper hole (*red arrow*) of the cap and through the hole of the sensor and screws both cap and sensor tightly to the gripper. Through the bottom hole you can adjust the sensitivity of the sensor via the potentiometer without having to disassemble the gripper tip cap.
 
 ![image4](imgs/Image4.jpg)![image5](imgs/Image5.jpg)
 ![image6](imgs/Image6.jpg)![image7](imgs/Image7.jpg)
@@ -43,13 +43,13 @@ Next thing is positioning the camera extension on top of the UFactory camera sta
 
 ![image8](imgs/Image8.jpg)![image9](imgs/Image9.jpg)
 
-Next thing is to prepare the Raspberry Pi Pico. Typically the Pico comes unsoldered, which is good in our case. We need to solder the pins pointing upwards, so that it can be correctly mounted on the bed. After soldering, screw the Raspberry Pi to the controller bed via two to four of the M1.5x4 self tapping screws (or similar). Make sure to position the controller in the correct orientation, with the USB port pointing left, when you are looking at it. After that plug in the jumper wire cables coming out of the sensor onto the correct pins, as shown in the diagram bellow. Finally, plug in the USB cable in the Pico to power it up.
+Next thing is to prepare the Raspberry Pi Pico. Typically the Pico comes unsoldered, which is good in our case. We need to solder the pins pointing upwards, so that it can be correctly mounted on the bed. After soldering, screw the Raspberry Pi to the controller bed via two to four of the M1.5x4 self tapping screws (or similar). Make sure to position the controller in the correct orientation, with the USB port pointing left, when you are looking at the robot from the front. After that plug in the jumper wire cables coming out of the sensor onto the correct pins of the controller, as shown in the diagram bellow. Finally, plug in the USB cable in the Pico to power it up.
 
 ![image10](imgs/Image10.jpg)
 ![image11](imgs/Image11.jpg)![image12](imgs/Image12.jpg)
 ![image13](imgs/Image13.jpg)
 
-Now, carefully slide on the controller cover onto the controller bed. Bend the cables a bit with your fingers so that they get inside the cover and don't bend controller pins from the pushing. If everything is printed and assembled correctly, the cover should easily snap into place.
+Now, carefully slide on the controller cover onto the controller bed. Bend the jumper cables a bit with your fingers so that they get inside the cover and don't bend any controller pins from the pushing. If everything is printed and assembled correctly, the cover should easily snap into place.
 
 ![image14](imgs/Image14.jpg)
 
@@ -61,4 +61,4 @@ Finally, connect the cables of the UFactory controller to the robot arm and the 
 
 ![image17](imgs/Image17.jpg)
 
-This concludes the system assembly and you should be able to move on to testing with the help of the test functions provided and/or installing all the software via the README.md.
+This concludes the system assembly. You should now move on to installing all the software via the README.md or if already done testing with the help of the test functions provided.

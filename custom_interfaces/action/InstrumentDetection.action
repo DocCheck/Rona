@@ -1,0 +1,10 @@
+# Request
+string detection_goal
+
+---
+# Result
+SingleInstrumentMsg[] detection_result
+
+---
+# Feedback
+SingleInstrumentMsg[] detection_feedback

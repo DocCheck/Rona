@@ -15,57 +15,58 @@ The system can be used with customizable machine learning models for instrument 
 
 For more information visit also: https://more.doccheck.com/en/rona/ 
 
-[![Rona in Action](../medical-instrument-detection/images/rona_action.jpg)](https://more.doccheck.com/en/rona/)
+[![Rona in Action](docs/imgs/rona_action.jpg)](https://more.doccheck.com/en/rona/)
 
 # Project Overview
 
 ## Requirements
-
-### Software
-
-Required software:
-
-- Python 3.10
-- [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html)
-- [Intel® RealSense™ SDK 2.0](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md)
-- [UFactory xArm-Python-SDK Version 1.13.0](https://github.com/xArm-Developer/xArm-Python-SDK) 
-
-To install the software and the necessary libraries follow the [quickstart guide](docs/quickstart.md) \
-For more detailed information on each ROS2 module check the [module documentation](docs/modules.md).
 
 ### Hardware
 
 Required hardware:
 
 - a robotic arm. Currently only the [UFactory xArm5](https://www.ufactory.cc/xarm-collaborative-robot/) is supported
-- a two-finger gripper e.g. [UFACTORY xArm Gripper](https://www.ufactory.cc/product-page/ufactory-xarm-gripper/) for the
+- a two-finger gripper e.g. [UFactory xArm Gripper](https://www.ufactory.cc/product-page/ufactory-xarm-gripper/) for the
   xArm5
+- a camera holder for the robot e.g. [UFactory camera stand](https://www.ufactory.cc/product-page/ufactory-xarm-camera-stand/)
 - a depth camera. Currently only the [Intel Realsense D435](https://www.ufactory.cc/xarm-collaborative-robot/) is  supported and tested in this setup
 - a suitable microphone 
 - a RaspberryPi Pico
 - a [SW420 vibration sensor](https://www.az-delivery.de/en/products/sw420-vibration-schuttel-erschutterung-sensor-modul)
-- 3D printable gripper tips, mounts and casings. CAD files can be found in the [3D models](docs/print_files) folder
-- cables and connectors for connecting the hardware parts
+- 3D printable gripper tips, mounts and casings. CAD files can be found in the [3D models](docs/parts) folder
+- cables and screws (more details in the assembly tutorial below)
 
-For assembly and setup of the hardware parts check the [assembly tutorial](docs/AssemblyTutorial.md).
+For assembly and setup of the hardware parts check the [assembly tutorial](docs/assembly_tutorial.md) first.
+
+### Software
+
+Required software:
+
+- [Linux machine with Ubuntu 22.04](https://ubuntu.com/download/desktop)
+- [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html)
+- [Python 3.10+](https://www.python.org/downloads/)
+- [Intel® RealSense™ SDK 2.0](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md)
+- [UFactory xArm-Python-SDK Version 1.13.0](https://github.com/xArm-Developer/xArm-Python-SDK) 
+- various libraries python libraries explained in the [quickstart guide](docs/quickstart.md)
+
+To install the software and the necessary libraries follow the [quickstart guide](docs/quickstart.md) \
+For more detailed information on each ROS2 module check the [module documentation](docs/modules.md).
+
 
 ## Installation
-- Get the necessary hardware listed in the [hardware requirements](#hardware)
-- Assemble the hardware as described in the [assembly guide](docs/AssemblyTutorial.md)
-- Train or download the necessary models for instrument detection, angle estimation and wake-word detection. 
-- Install the necessary software following the [quickstart guide](docs/quickstart.md) 
-
-Install the necessary environment on workstation to run the navigation and manipulation modules
+- Get the necessary hardware listed in the [assembly guide](docs/assembly_tutorial.md) and follow it for the full assembly of the system.
+- Follow the [quickstart guide](docs/quickstart.md) and install the necessary software, train or download all the necessary models for instrument detection, angle estimation and wake-word detection. 
+- Do the [one-time configurations](docs/config.md) before you can continue with the usage of Rona
 
 
 # How to use Rona
 ## Starting the system
-Make sure you followed the [assembly guide](docs/AssemblyTutorial.md) and the [quickstart guide](docs/quickstart.md) for the software installation.
-Then you can start with the following commands in the rona_ws/ folder:
+Make sure you followed the [assembly guide](docs/assembly_tutorial.md), the [quickstart guide](docs/quickstart.md) and the [configuration](docs/config.md) before proceeding.
+If everything is done successfully, you can start with the following commands in the rona_ws/ folder:
 
 ```bash
-# Build and source the packages
-$ make build-ros
+# Build and source the packages again just in case
+$ make build-workspace
 
 # Start system
 $ make start-system

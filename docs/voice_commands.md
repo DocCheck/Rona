@@ -17,8 +17,6 @@ In idle mode Rona will listen for her wake-word "Hey, Rona...". If she hears it 
 The default listening time is 5 seconds. 
 After this time she will close her gripper and go back to idle mode.
 
-##Voice Commands
-
 ### Available Voice Commands
 The system has 3 main commands for handling instruments: 
 - *give/take* - Give an instrument from the tray to the surgeon
@@ -26,10 +24,10 @@ The system has 3 main commands for handling instruments:
 - *change* - First return an instrument, then take an instrument from the tray.
 
 In addition to this there are 5 commands for system control:
-- *cancel* - Cancel the current command
-- *recalibration*, - Recalibrates the transfer position
-- *reset* - Reset the system
-- *save* - saves the calibration
+- *recalibration* - recalibrates the transfer position
+- *reset* - reset the system
+- *save* - saves the recalibration
+- *cancel* - cancel the recalibration
 - *shut down* - shuts down the system and Rona will move into the shutdown position
 
 ### Command Dialogue Flow
@@ -47,18 +45,18 @@ Rona will indicate that she heard the wake word by opening her gripper. While th
         R: "Wrong input! You can choose between blunt and pointed scissors."
         U: "Blunt scissors"
 
-    If she for any reason could not find the instrument after a couple of seconds, she will tell you and go back to sleep.
+    If she for any reason could not find the instrument after a couple of seconds, she will tell you and go back to sleep - awaiting your wake-word.
 
         U: "Give me the blunt scissors"
         R: "Could not find instrument"
 
-    If you don't take the instrument after some time she will cancel the give command, return it back to its place and will move back to home position to scan and wait for your wake-word and command. 
+    If you don't take the instrument after some time she will cancel the give command, return the instrument back to its place and will move back to home position to scan and wait for your wake-word and command. 
 
     
-* ***return***: Rona will scan the instrument table for free slots and checks if any are missing (because you have taken them). If you call for return when you don't have an instrument, she will tell you that it is not possible and that all instruments are on the table. Otherwise she will go to the transfer position and await for you to return your instrument.
+* ***return***: Rona will scan the instrument table for free slots and checks if any are missing (because they have been taken). If you call for return when you don't have an instrument, she will tell you that it is not possible and that all instruments are on the table. Otherwise she will go to the transfer position and await for you to return your instrument.
 
         U: "Return"
-        R: "Return has been chosen" / "Return is not possible, instruments are on the table"
+        R: "Return has been chosen" / "Return is not possible, all instruments are on the table"
 
     If you don't place the instrument in the gripper after some time she will cancel the return and move back to home position to scan and wait for your wake-word and command. 
 
@@ -101,4 +99,4 @@ Next we want to briefly explain the extra commands.
         U: "Recalibrate"
         R: "Recalibration started"
 
-From here we have two choices, we can either ***save*** or ***cancel*** the recalibration with the respective commands. If we try to give any other instructions instead, Rona will prompt us to save changes before we can continue. This means we either have to save or cancel before we can get back to normal operations.
+From here we have two choices, we can either ***save*** or ***cancel*** the recalibration with the respective commands. If we try to give any other instructions instead, Rona will prompt us to save or cancel changes before we can continue. This means we either have to save or cancel before we can get back to normal operations.

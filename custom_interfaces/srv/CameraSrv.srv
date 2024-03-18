@@ -1,0 +1,10 @@
+string request
+string instrument
+---
+string response
+float32 xi
+float32 yi
+float32 yaw
+float32 xr
+float32 yr
+bool success

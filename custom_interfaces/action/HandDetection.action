@@ -1,0 +1,10 @@
+# Request
+string detection_goal
+
+---
+# Result
+bool success
+
+---
+# Feedback
+bool seen_hands
