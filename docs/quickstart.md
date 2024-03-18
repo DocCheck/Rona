@@ -36,7 +36,7 @@ source /opt/ros/humble/setup.bash
 
 # Download Rona repository and move it to the right place
 echo 'Downloading Rona repository and moving it to the right place...'
-git clone git@gitlab.intranet.doccheck.ag:rd/Robot-xArm-Development.git
+git clone https://github.com/DocCheck/Rona.git
 mv Robot-xArm-Development/ src/
 
 # Download xArm SDK and move it to the right place

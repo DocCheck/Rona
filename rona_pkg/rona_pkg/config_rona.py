@@ -78,7 +78,7 @@ distance_hand = 30 # [cm] the minimum distance of the hand to the camera to be c
 ###########################
 
 path_mid_model = "src/rona_pkg/rona_pkg/instrument_detector/object_detector/Rona_mid/Rona_mid_model/weights/instrument_detector_model.pt"
-path_rotnet_model = "src/rona_pkg/rona_pkg/instrument_detector/orientation_estimator/RotNet/data/models/rotation_estimation_weights.pt"
+path_rotnet_model = "src/rona_pkg/rona_pkg/instrument_detector/orientation_estimator/RotNet/data/models/instrument_detector_model.pt"
 path_empty_space = "src/rona_pkg/rona_pkg/instrument_detector/output/slot_estimation/"
 path_output = "src/rona_pkg/rona_pkg/instrument_detector/output/camera/"
 
