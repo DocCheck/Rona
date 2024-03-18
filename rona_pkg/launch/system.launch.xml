@@ -1,0 +1,26 @@
+<launch>
+    <!-- Launch for Robot-nurse system -->
+
+    <!-- Main node of the system -->
+    <node pkg="rona_pkg" exec="main_rona.py" name="main_rona" output="screen"> </node>
+
+    <!-- Service and action nodes -->     
+    <node pkg="rona_pkg" exec="sensor_communication.py" name="controller_node" output="screen"> </node>
+
+    <!-- Calibration service node -->
+    <node pkg="rona_pkg" exec="service_calibration.py" name="calibration_service" output="screen"> </node>
+    
+    <!-- Camera service node -->
+    <node pkg="rona_pkg" exec="service_camera.py" name="camera_service" output="screen"> </node>
+
+    <!-- Speaker service node -->
+    <node pkg="rona_pkg" exec="service_speaker.py" name="speaker_service" output="screen"> </node>
+
+    <!-- Voice recognition service node -->
+    <node pkg="rona_pkg" exec="service_voice_recognition.py" name="voice_recognition_service" output="screen"> </node>
+ 
+    <!-- Manual control service node 
+    <node pkg="rona_pkg" exec="service_manual_control.py" name="manual_control_service" output="screen"> </node>
+    -->
+    
+</launch>

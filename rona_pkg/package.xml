@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rona_pkg</name>
+  <version>0.0.0</version>
+  <description>Controller package for Rona</description>
+  <maintainer email="alexander.vuchkov@doccheck.com">user</maintainer>
+  <license>X</license>
+
+  <!-- Ament ROS python dependencies -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <!-- ROS Python build dependencies -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend> 
+
+  <!-- Custom interfaces build dependencies -->
+  <depend>custom_interfaces</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
