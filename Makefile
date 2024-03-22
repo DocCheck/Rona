@@ -27,10 +27,10 @@ test-camera:
 	python3 test_camera_intel.py
 
 test-controller:
-    @echo Unlocking controller port...
-    sudo chmod a+rw /dev/ttyACM0
-    cd src/rona_pkg/rona_pkg/tests
-    python3 test_controller_connection.py
+	@echo Unlocking controller port...
+	sudo chmod a+rw /dev/ttyACM0
+	cd src/rona_pkg/rona_pkg/tests
+	python3 test_controller_connection.py
 
 test-robot:
 	cd src/rona_pkg/rona_pkg/
